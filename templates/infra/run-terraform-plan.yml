@@ -7,6 +7,6 @@ steps:
     inputs:
       provider: 'azurerm'
       command: 'plan'
-      workingDirectory: '$(System.DefaultWorkingDirectory)/$(terraform_workingdir)'
+      workingDirectory: '$(System.DefaultWorkingDirectory)/$(terraform_workingdir)/terraform'
       commandOptions: '-var "location=$(location)" -var "prefix=$(namespace)" -var "postfix=$(postfix)" -var "environment=$(environment)" -var "enable_aml_computecluster=$(enable_aml_computecluster)" -var "enable_monitoring=$(enable_monitoring)" -var "client_secret=$(CLIENT_SECRET)"'
       environmentServiceNameAzureRM: '$(ado_service_connection_rg)'
